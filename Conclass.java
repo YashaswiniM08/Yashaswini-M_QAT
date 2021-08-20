@@ -29,10 +29,13 @@ public class Conclass {
 				insertQuery="insert into test(id, name , subject, marks) values (4, 'rita','maths',98)";
 				stmt.executeUpdate(insertQuery);*/
 				
-				
+				String updateQuery="update name set name='jai'	where id='3'";
+			 stmt.execute(updateQuery);
 				ResultSet rs = stmt.executeQuery("SELECT * FROM test ");
+			 
 				
 				System.out.println("Query execution" + rs);
+			
 				
 				while(rs.next()) {
 					System.out.println(rs.getString("id") + " : " +  rs.getString("name")+ " : " +  rs.getString("subject")+ " : " +  rs.getString("marks"));
